@@ -13,7 +13,7 @@ services.AddLogging(configure => configure.AddConsole());
 services.AddSingleton<IConnectionMultiplexer>(sp =>
     ConnectionMultiplexer.Connect(new ConfigurationOptions
     {
-        EndPoints = { "192.168.66.157:6381" },
+        EndPoints = { "localhost:6379" },
         ClientName = "squidward",
         AbortOnConnectFail = false,
     }));
